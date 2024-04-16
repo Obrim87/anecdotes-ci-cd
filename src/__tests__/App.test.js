@@ -9,6 +9,8 @@ describe('test suite', () => {
   test('make sure main page loads', async () => {
     renderWithProviders(<App />, { store });
 
-    expect(screen.getByText('Anecdotes')).toBeInTheDocument();
+    expect(
+      screen.getByText('Welcome to Anecdotes Central.')
+    ).toBeInTheDocument();
   });
 });
