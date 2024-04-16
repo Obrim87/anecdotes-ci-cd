@@ -9,10 +9,13 @@ primary_region = 'syd'
 [build]
 
 [env]
-	PORT = "8080"
+	PORT = '5001'
+
+[processes]
+  app = 'node app.js'
 
 [http_service]
-  internal_port = 8080
+  internal_port = 5001
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
