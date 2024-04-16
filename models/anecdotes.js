@@ -21,7 +21,7 @@ const anecdoteSchema = new mongoose.Schema({
 
 // id field is in fact, an object. Converts the object into a string, then removed the id and v fields
 anecdoteSchema.set('toJSON', {
-  transform: (document, returnedObject) => {
+  transform: (_document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString();
     delete returnedObject._id;
     delete returnedObject.__v;

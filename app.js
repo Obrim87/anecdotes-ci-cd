@@ -9,11 +9,11 @@ app.use(express.static('build'));
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send('Home Page!');
 });
 
-app.get('/anecdotes', async (req, res) => {
+app.get('/anecdotes', async (_req, res) => {
   res.json(await Anecdote.find({}));
 });
 

@@ -4,10 +4,10 @@ const notificationSlice = createSlice({
   name: 'notification',
   initialState: '',
   reducers: {
-    notification(state, action) {
+    notification(_state, action) {
       return action.payload;
     },
-    clearNotification(state, action) {
+    clearNotification(_state, _action) {
       return '';
     }
   }

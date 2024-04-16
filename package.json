@@ -25,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "eslint": "eslint './**/*.{js,jsx}'",
     "eject": "react-scripts eject",
     "server": "nodemon app.js",
     "json-server": "json-server -p3001 --watch db.json"

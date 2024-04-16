@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseVote } from '../reducers/anecdoteReducer';
 import { setNotification } from '../reducers/notificationReducer';
-import { createSelector } from '@reduxjs/toolkit';
 
 const AnecdoteList = () => {
   const dispatch = useDispatch();

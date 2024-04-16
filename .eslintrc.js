@@ -5,7 +5,12 @@ module.exports = {
     es6: true,
     'jest/globals': true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
   settings: {
     react: {
       version: 'detect'
@@ -28,7 +33,17 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'arrow-spacing': ['error', { before: true, after: true }],
     'react/prop-types': 0,
-    'no-unused-vars': 'warn',
-    'react/react-in-jsx-scope': 'off'
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        args: 'all',
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_'
+      }
+    ],
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-var-requires': 0
   }
 };
