@@ -3,8 +3,6 @@ const app = express();
 const Anecdote = require('./models/anecdotes');
 const cors = require('cors');
 
-const PORT = process.env.PORT || 5001;
-
 app.use(express.static('build'));
 app.use(express.json());
 app.use(cors());
@@ -36,6 +34,11 @@ app.put('/anecdotes/:id', async (req, res) => {
   }
 });
 
+const PORT = process.env.PORT;
+
 app.listen(PORT, () => {
   console.log(`🚀 Server started on port: ${PORT}`);
 });
+
+// so close! Find out why the anecdotes arent showing
+// they seem like they are there, but there is an error in console.
